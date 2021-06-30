@@ -1,0 +1,22 @@
+{
+  "name": "solar-system-backend",
+  "version": "1.0.0",
+  "description": "The backend and API for the solar system app",
+  "main": "dist/index.js",
+  "author": "Scott Harrison",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.12.5",
+    "nodemon": "^2.0.9",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
+  },
+  "scripts": {
+    "start": "nodemon index.ts",
+    "build": "tsc --project ./"
+  }
+}
