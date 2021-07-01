@@ -1,0 +1,19 @@
+.wrapper {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  margin: 6px;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.statLabel {
+  font-weight: bold;
+  margin-right: 6px;
+}
