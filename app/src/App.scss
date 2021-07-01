@@ -1,0 +1,19 @@
+body {
+  --dark-color: #14181d;
+  --light-color: #ebebeb;
+
+  background-color: var(--dark-color);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+  sans-serif;
+}
+
+.planet-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}

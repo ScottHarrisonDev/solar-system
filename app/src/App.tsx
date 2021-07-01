@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.scss';
+import {Header} from "./components/Header/Header";
+import {Planet} from "./components/Planet/Planet";
 
 function App() {
+  const [planets, setPlanets] = useState<any[]>([])
+
+  React.useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/celestial-bodies`)
+        .then((res) => res.json())
+        .then((data) => setPlanets(data))
+        .catch(error => {
+          console.error('There was an unexpected error: ', error);
+        });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Header title="The Solar System"/>
+        <div className={"planet-wrapper"}>
+          {planets.map(planet => (
+              <Planet
+                  key={planet.id}
+                  name={planet.name}
+                  picture={planet.picture}
+                  age={planet.age}
+                  mass={planet.mass}
+              />
+          ))}
+        </div>
+      </div>
   );
 }
 
