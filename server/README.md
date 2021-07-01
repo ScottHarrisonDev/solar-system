@@ -5,7 +5,7 @@ This is an Express server which serves up some data about the celestial bodies o
 ## Install
 1. Clone the Git repository.
 2. Open a terminal at the project root and run `yarn install`, this will install all the dependencies for the project.
-3. From the project root run `yarn start` to start the server. You should see a message to say the 'API Server is running' and if you navigate to http://localhost:8000/celestial-bodies you should see a JSON response. You can now run the server and develop locally.
+3. From the project root run `yarn start` to start the server. You should see a message to say the 'API Server is running' and if you navigate to http://localhost:8000/celestial-bodies you should see a JSON response. You can now develop locally.
 
 ## Deploy
 1. Ensure your environment has the NODE_ENV set appropriately. This can usually be done within the interface of your hosting platform (AWs, Heroku, Digital Ocean etc.).
