@@ -67,4 +67,7 @@ const planets: Planets = [
   }
 ];
 
-export const findAll = async (): Promise<Planet[]> => planets;
+export const findByPage = async (page: number, perPage: number): Promise<Planet[]> => {
+
+  return planets;
+}
