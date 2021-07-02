@@ -19,6 +19,6 @@
   },
   "scripts": {
     "start": "nodemon index.ts",
-    "build": "cp data.json ./build/data.json && tsc --project ./"
+    "build": "tsc --project ./"
   }
 }
