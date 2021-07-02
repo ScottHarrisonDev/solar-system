@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-
-const celestialBodies = require('./data.json'); // In a production application this would come from the database
+import {planetsRouter} from "./controllers/planets.controller";
 
 const app = express();
 const PORT = 8000;
@@ -14,10 +13,7 @@ app.use(cors({
   origin: '*'
 }));
 
-
-app.get('/celestial-bodies', (req, res) => {
-  res.json(celestialBodies);
-});
+app.use("/", planetsRouter);
 
 app.listen(PORT, () => {
   console.log(`API Server is running @ http://localhost:${PORT}`);
