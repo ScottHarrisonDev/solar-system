@@ -67,7 +67,17 @@ const planets: Planets = [
   }
 ];
 
-export const findByPage = async (page: number, perPage: number): Promise<Planet[]> => {
+const getStartPageIndex = (page: number, perPage: number): number => {
+  return (page - 1) * perPage;
+}
 
-  return planets;
+const getEndPageIndex = (startEl: number, perPage: number): number => {
+  return startEl + perPage;
+}
+
+export const findByPage = async (page: number, perPage: number): Promise<Planet[]> => {
+  const startEl = getStartPageIndex(page, perPage);
+  const endEl = getEndPageIndex(startEl, perPage);
+
+  return planets.slice(startEl, endEl);
 }

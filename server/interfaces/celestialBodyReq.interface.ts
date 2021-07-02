@@ -1,4 +1,4 @@
 export interface celestialBodyReq {
-  page: number,
-  perPage: number
+  page: string,
+  perPage: string
 }

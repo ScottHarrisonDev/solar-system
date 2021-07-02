@@ -7,7 +7,7 @@ export const planetsRouter = express.Router();
 
 planetsRouter.get("/celestial-bodies", async (req: Request<{},{},{},celestialBodyReq>, res: Response) => {
   try {
-    const planets: Planet[] = await PlanetService.findByPage(req.query.page, req.query.perPage);
+    const planets: Planet[] = await PlanetService.findByPage(parseInt(req.query.page), parseInt(req.query.perPage));
 
     res.status(200).send(planets);
   } catch (error) {
