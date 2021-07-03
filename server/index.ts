@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import {planetsRouter} from "./controllers/planets.controller";
+import {planetsRouter} from "./src/controllers/planets.controller";
 
 const app = express();
 const PORT = 8000;
@@ -15,6 +15,7 @@ app.use(cors({
 
 app.use("/", planetsRouter);
 
-app.listen(PORT, () => {
+module.exports = app.listen(PORT, () => {
   console.log(`API Server is running @ http://localhost:${PORT}`);
 });
+

@@ -13,6 +13,11 @@ planetsRouter.get("/celestial-bodies", async (req: Request<{},{},{},celestialBod
     }
     const planets: Planet[] = await PlanetService.findByPage(parseInt(req.query.page), parseInt(req.query.perPage));
 
+    if (planets.length === 0) {
+      res.status(404).send("No items found");
+      return;
+    }
+
     res.status(200).send(planets);
   } catch (error) {
     res.status(500).send(error.message);
