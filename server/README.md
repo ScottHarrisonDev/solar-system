@@ -14,6 +14,10 @@ This is an Express server which serves up some data about the celestial bodies o
 4. Run `yarn build` from the project root, this will compile the project into JavaScript.
 5. Run `node build/index.js` to run the compiled code.
 
+## Tests
+1. Build the app by running `yarn build` from the project root.
+2. Run `yarn test` from the project root to run tests and view output.
+
 ## Endpoints
 This API only has a single endpoint:
 
