@@ -13,3 +13,6 @@ This is an React app which displays some information about the planets (and star
 2. Run `yarn install` from the project root, this will install all the dependencies for the project.
 3. Run `yarn build` from the project root, this will build the application for a production environment.
 4. Serve the build folder in your hosting platform of choice. 
+
+## Tests
+Run `yarn run test:watch` from the project root to watch the tests in this project and run them when the code changes.
