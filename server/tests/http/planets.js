@@ -46,4 +46,12 @@ describe("/GET celestial-bodies", () => {
         done();
       });
   });
+  it("should return a HTTP 400 invalid request error if a single param is omitted", (done) => {
+    chai.request(server)
+      .get("/celestial-bodies?page=1")
+      .end((err, res) => {
+        res.should.have.status(400);
+        done();
+      });
+  });
 });

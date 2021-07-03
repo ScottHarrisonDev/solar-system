@@ -7,10 +7,15 @@ export const planetsRouter = express.Router();
 
 planetsRouter.get("/celestial-bodies", async (req: Request<{},{},{},celestialBodyReq>, res: Response) => {
   try {
-    if (req.query.page === undefined || req.query.perPage === undefined) {
-      res.status(400).send("Please match the required request format.");
+    if (req.query.page === undefined) {
+      res.status(400).send("Missing parameter: page");
       return;
     }
+    if (req.query.perPage === undefined) {
+      res.status(400).send("Missing parameter: perPage");
+      return;
+    }
+
     const planets: Planet[] = await PlanetService.findByPage(parseInt(req.query.page), parseInt(req.query.perPage));
 
     if (planets.length === 0) {
