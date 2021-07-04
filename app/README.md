@@ -1,6 +1,6 @@
 # Solar System App
 
-This is an React app which displays some information about the planets (and star) in our Solar System.
+This is a React app which displays some information about the planets (and star) in our Solar System.
 
 ## Install
 1. Clone the Git repository.
